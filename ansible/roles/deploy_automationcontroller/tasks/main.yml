@@ -52,7 +52,7 @@
     dest: /tmp/automationcontroller_installer/inventory
 
 - name: Run the Automation Controller installer
-  shell: "source /opt/venvs/venv_automationcontroller_install/bin/activate; ./setup.sh"
+  shell: "source /opt/venvs/venv_automationcontroller_install/bin/activate; ./setup.sh -e ansible_become_method=sudo -e ansible_become=True"
   args:
     chdir: /tmp/automationcontroller_installer
   async: 1400

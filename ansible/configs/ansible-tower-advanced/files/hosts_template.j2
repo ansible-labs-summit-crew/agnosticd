@@ -5,9 +5,11 @@
 {% endfor %}
 
 [database]
+{% if groups['automationcontroller_database'] is defined %}
 {% for host in groups['automationcontroller_database'] %}
 {{ host }} 
 {% endfor %}
+{% endif %}
 
 
 
